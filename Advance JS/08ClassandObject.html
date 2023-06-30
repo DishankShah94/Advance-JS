@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Object</title>
+</head>
+
+<body>
+    <script>
+        class Admission {
+            AdmissionDone() {
+                alert(this.name + " Your Admission is Done");
+            }
+            AdmissionCancel() {
+                alert(this.name + " Your Admission is Cancel");
+            }
+            fillName(givename) {
+                this.name = givename;
+            }
+        }
+        const dishu = new Admission();
+        console.log(dishu);
+        dishu.fillName("dishu");
+        dishu.AdmissionDone();
+        const aashu = new Admission();
+        console.log(aashu);
+        aashu.fillName("aashu");
+        aashu.AdmissionDone();
+        const sidhu = new Admission();
+        console.log(sidhu);
+        sidhu.fillName("sidhu");
+        sidhu.AdmissionCancel();
+    </script>
+</body>
+
+</html>

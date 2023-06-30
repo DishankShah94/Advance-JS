@@ -1,0 +1,26 @@
+Programming = real life ne advance banava mate it is called programming.
+
+OOPS = Object oriented programming language.
+
+Object oriented Programming language is used to real time entities ne reuse karva mate code reability
+come karva mate.
+
+Four Pillars of oops 
+
+1) Abstration 
+2) Inheritance 
+3) Polymorphism
+4) Encapsulation
+
+1) Abstration = Real time entities ne hide karva mate like we have done code we hide the code after
+click on logout user only see message but not see code.
+
+2) Inheritance = Parent - child ek object ni vastu bija ne made it also says upgradation.
+
+3) Encapsulation = ex we have keyboard, cpu, desktop screen and mouse we set all togther and create a
+system that is called Encapsulation.
+
+Reakl time Multiple entities we have create one entity that is called Encapsulation.
+
+
+4) Polymorphim = Multiple feature ek class inside it is called Polymorshipm  
