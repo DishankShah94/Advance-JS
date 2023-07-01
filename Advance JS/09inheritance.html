@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            eat() {
+                alert(this.name + " was eating");
+            }
+            walk() {
+                alert(this.name + " was walking");
+            }
+            sleep() {
+                alert(this.name + " was sleeping");
+            }
+            fill(name) {
+                this.name = name;
+            }
+        }
+        class Birds extends Animal {
+            fly() {
+                alert(this.name + " was flying");
+            }
+        }
+        let dodo = new Animal();
+        dodo.fill("Dodo");
+        dodo.walk();
+        dodo.eat();
+        dodo.sleep();
+
+        let eagle = new Birds();
+        eagle.fill("Eagle");
+        eagle.eat();
+        eagle.walk();
+        eagle.fly();
+        eagle.sleep(); 
+    </script>
+</body>
+
+</html>
