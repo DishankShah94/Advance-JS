@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- The function* declaration creates a binding of a new generator function to a given name. 
+        A generator function can be exited and later re-entered, with its context (variable bindings) 
+        saved across re-entrances. -->
+    <script>
+
+        function* generator() {
+            yield 10;
+            yield 20;
+            yield 10 + 20;
+        }
+        const result = generator();
+        console.log(result.next().value);
+        console.log(result.next().value);
+        console.log(result.next().value);
+    </script>
+</body>
+
+</html>
