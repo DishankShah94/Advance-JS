@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>this referes its self, pointing/refering its own object</p>
+
+    <script>
+
+        class MathOp {
+            // let data = "Something"
+            data = "Something"
+            addition(a, b) {
+                console.log(this.data);
+                // console.log(a + b); //1000 line of code
+                console.log(this.other(12, 2));
+                return a + b;
+            }
+            other(x, i) {
+                // console.log(x / i);
+                return x / i;
+
+            }
+        }
+        MathOpOb = new MathOp
+        MathOpOb.addition(50, 90)
+    </script>
+</body>
+
+</html>
