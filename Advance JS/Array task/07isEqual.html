@@ -13,7 +13,19 @@
     <script>
         var arr1 = [1, 2, 3, 4, 5];
         var arr2 = [1, 2, 3, 4, 5];
-        console.log(_.isEqual(arr1, arr2));
+        if (arr1.length === arr2.length) {
+            for (var i = 0; i < arr1.length; i++) {
+                const value1 = arr1[i];
+                const value2 = arr2[i];
+                if (value1 === value2) {
+                    console.log("true");
+                }
+                else {
+                    console.log("false");
+                }
+            };
+        }
+        // console.log(_.isEqual(arr1, arr2));
     </script>
 </body>
 
