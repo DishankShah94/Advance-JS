@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function deepCompare(obj1, obj2) {
+            // Check if both objects are of the same type
+            if (typeof obj1 !== typeof obj2) {
+                return false;
+            }
+
+            // If the objects are primitive types, compare them directly
+            if (typeof obj1 !== 'object' || obj1 === null) {
+                return obj1 === obj2;
+            }
+
+            // Get the keys of both objects
+            const keys1 = Object.keys(obj1);
+            const keys2 = Object.keys(obj2);
+
+            // Check if they have the same number of properties
+            if (keys1.length !== keys2.length) {
+                return false;
+            }
+
+            // Check if all properties in obj1 are also in obj2 and have the same values (recursively)
+            for (const key of keys1) {
+                if (!keys2.includes(key) || !deepCompare(obj1[key], obj2[key])) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Example usage:
+        const obj1 = {
+            name: "John",
+            age: 30,
+            address: {
+                street: "123 Main St",
+                city: "Exampleville"
+            }
+        };
+
+        const obj2 = {
+            name: "John",
+            age: 30,
+            address: {
+                street: "123 Main St",
+                city: "Exampleville"
+            }
+        };
+
+        const obj3 = {
+            name: "Jane",
+            age: 25,
+            address: {
+                street: "456 Elm St",
+                city: "Anothercity"
+            }
+        };
+
+        console.log(deepCompare(obj1, obj2)); // true
+        console.log(deepCompare(obj1, obj3)); // false
+
+
+    </script>
+</body>
+
+</html>

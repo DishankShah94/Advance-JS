@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function shallowIntersection(obj1, obj2) {
+            const result = {};
+
+            for (const key in obj1) {
+                if (obj2.hasOwnProperty(key)) {
+                    result[key] = obj1[key];
+                }
+            }
+            return result;
+        }
+        const obj1 = { a: 1, b: 2, c: 3 };
+        const obj2 = { b: 2, c: 4, d: 5 };
+
+        const intersection = shallowIntersection(obj1, obj2);
+        console.log(intersection);
+    </script>
+</body>
+
+</html>
