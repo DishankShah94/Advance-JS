@@ -24,16 +24,16 @@
             document.getElementById("disp").innerHTML = city.value;
             // document.write("called")
             if (city.value == "") {
-                alert("please enter value")
+                alert("please enter city")
             } else {
-                fetch("https://api.opencagedata.com/geocode/v1/json?q=${city}&key=faed4d9eb29d483a866000c901ccb680")
+                fetch(`https://api.opencagedata.com/geocode/v1/json?q=${city.value}&key=faed4d9eb29d483a866000c901ccb680`)
                     .then((response) => response.json()).
                     then((result) => {
                         let data = result["results"][1]["annotations"]["DMS"]
                         // let data = result["results"][1]["components"]["city"];
                         // let data = result["results"]["city"];
                         document.getElementById("ans").innerHTML = JSON.stringify(data);
-
+                        city.value = "";
                         // console.log(result);
                         // let htmlData = "";
                         // (Object.entries(result)).forEach(element => {
