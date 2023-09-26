@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // iife = immediate invoked function expression 
+        //iife hai function ko turant chalane ki kala, is tareeke se ki hum log koi private value bana sake 
+        var ans = (function () {
+            var privateval = 12;
+            return {
+                getter: function () {
+                    console.log(privateval);
+                },
+                setter: function (val) {
+                    privateval = val;
+                }
+            }
+        })() 
+    </script>
+</body>
+
+</html>
