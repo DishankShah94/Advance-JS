@@ -9,7 +9,7 @@
 
 <body>
     <script>
-
+        //polymorphism means the samwe function with different value is called many times
         test = "Checking"
         console.log(test);
         test = "called"
@@ -23,7 +23,7 @@
                 return 0;
             }
             toString() {
-                // console.log(Object.getPrototypeOf(this));
+                console.log(Object.getPrototypeOf(this));
                 return Object.getPrototypeOf(this).constructor.name;
             }
         }
