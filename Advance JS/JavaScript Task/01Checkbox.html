@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="#">Name:Dishank
+        <input type="checkbox" class="check">
+    </label>
+    <br>
+    <label for="#">Name:Dishank
+        <input type="checkbox" class="check">
+    </label>
+    <br>
+    <label for="#">Name:Dishank
+        <input type="checkbox" class="check">
+    </label>
+    <br>
+    <label for="#">Name:Dishank
+        <input type="checkbox" class="check">
+    </label>
+    <br>
+    <label for="#">Name:Dishank
+        <input type="checkbox" class="check">
+    </label>
+    <br>
+    <br>
+    <label for=""><button onclick="btnChecked()">All Click</button></label>
+    <script>
+        function btnChecked() {
+            let checkboxes = document.querySelectorAll(".check");
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked == false) {
+                    checkboxes[i].checked = true;
+                }
+                else {
+                    checkboxes[i].checked = false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

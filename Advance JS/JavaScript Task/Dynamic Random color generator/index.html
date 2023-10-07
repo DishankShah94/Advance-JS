@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #ans {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="back" id="back">
+        <div class="box">
+            <h2 class="h2" id="color">#fff</h2>
+            <button type="submit" class="btn" id="btn" onclick="genrateColor()">Random Color Generator</button>
+            <button type="submit" onclick="btnAdd()" class="btn">Add Hash value</button>
+            <p id="ans"></p>
+        </div>
+    </div>
+    <script>
+
+        const randomData1 = new Array();
+
+        function genrateColor() {
+            const randomNumber = Math.floor(Math.random() * 16777215);
+            //convert hash value
+            const randomCode = "#" + randomNumber.toString(16);
+            document.getElementById("back").style.backgroundColor = randomCode;
+            document.getElementById("color").innerText = randomCode;
+            randomData1.push(randomCode);
+            console.log(randomData1);
+            return randomCode;
+        }
+        function btnAdd() {
+            // const randomCode = genrateColor();
+            document.getElementById("ans").innerText = randomData1;
+            for (let i = 0; i < randomData1.length; i++) {
+                if (randomData1.length > 0) {
+                    let newButton = document.createElement("button");
+                    let data = document.createTextNode("Remove");
+                    newButton.appendChild(data);
+                    document.getElementById("ans").append(newButton);
+                }
+            }
+        }
+        genrateColor();
+    </script>
+</body>
+
+</html>
