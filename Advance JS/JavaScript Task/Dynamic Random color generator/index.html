@@ -25,7 +25,6 @@
     <script>
 
         const randomData1 = new Array();
-
         function genrateColor() {
             const randomNumber = Math.floor(Math.random() * 16777215);
             //convert hash value
@@ -40,12 +39,22 @@
             // const randomCode = genrateColor();
             document.getElementById("ans").innerText = randomData1;
             for (let i = 0; i < randomData1.length; i++) {
-                if (randomData1.length > 0) {
-                    let newButton = document.createElement("button");
-                    let data = document.createTextNode("Remove");
-                    newButton.appendChild(data);
-                    document.getElementById("ans").append(newButton);
-                }
+
+                let newButton = document.createElement("button");
+                let data = document.createTextNode("Remove");
+                newButton.appendChild(data);
+                newButton.classList.add("btn");
+                newButton.setAttribute("id", "btn2");
+                document.getElementById("ans").appendChild(newButton);
+                // console.log(newButton);
+                // console.log(randomData1[i], i);
+                // return newButton;
+                newButton.addEventListener("click", () => {
+                    // console.log(randomData1);
+                    randomData1.splice(i, 1);
+                    btnAdd(); // button rerender 
+
+                });
             }
         }
         genrateColor();
