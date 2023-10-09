@@ -48,12 +48,11 @@
                 document.getElementById("ans").appendChild(newButton);
                 // console.log(newButton);
                 // console.log(randomData1[i], i);
-                // return newButton;
+                // return newButton;                
                 newButton.addEventListener("click", () => {
                     // console.log(randomData1);
                     randomData1.splice(i, 1);
                     btnAdd(); // button rerender 
-
                 });
             }
         }
