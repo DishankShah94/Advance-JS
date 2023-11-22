@@ -38,6 +38,20 @@
         const lyrics = ["head", ...parts, "and", "toes"];
         console.log(lyrics);
         //  ["head", "shoulders", "knees", "and", "toes"]
+        //Rest 
+        function demo(a, ...r) {
+            console.log(a, r);
+        }
+        demo(50, 60, 70, 80, 90);
+        demo(10, 20);
+        demo(50, 55, 60);
+
+        //Spread
+        function dispData(uname, email, address) {
+            console.log(uname, email, address);
+        }
+        let arr = ["dishank", "dishank@gmail.com", "gandhinagar"];
+        dispData(...arr);
     </script>
 </body>
 
