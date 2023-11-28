@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const url = "https://www.google.com/search?q=geeks for geeks";
+        const encodedURL = encodeURI(url);
+        console.log(encodedURL)
+        console.log(escape(url));
+        console.log(decodeURI(encodedURL));
+        console.log(unescape(encodedURL));
+    </script>
+</body>
+
+</html>
