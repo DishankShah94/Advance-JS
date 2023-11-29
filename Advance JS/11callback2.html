@@ -27,6 +27,19 @@
         }
         add(2, 3, hello);
         add(2, 5, goodmorning);
+        function parentFunction(callback2) {
+            console.log("called before callback inside parent");
+            let a = "dishank";
+            setTimeout(() => {
+                callback2(a);
+            }, 2000);
+            console.log("called after callback inside parent");
+
+        }
+        function innerFunction(data) {
+            console.log("called inside callback", data);
+        }
+        parentFunction(innerFunction);
     </script>
 </body>
 
