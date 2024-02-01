@@ -1,0 +1,16 @@
+-what is package.json
+-what is Fiber reconciler
+-what is strict mode
+-what is web vitals
+-exporting variable through a file
+-is it possible to declare function inside java script object
+-props are mutable or not 
+-is it possible to rename props variable name ?
+-reserved prop name any ?
+-diffrence between fragment and <></>
+-java & js diffrence ?
+-private variable decalre in js
+-getter setter and static feild
+-array,string all functions
+-serve package in react
+-local storage and cookies
