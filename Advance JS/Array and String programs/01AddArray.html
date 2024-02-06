@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = [1, 2, 3, 4, 5];
+        // add the value to array
+        const addValue = 10;
+        for (let i = array.length - 1; i >= 0; i--) {
+            array[i + 1] = array[i]
+        }
+        array[0] = addValue;
+        console.log(array);
+    </script>
+    <script>
+        const array1 = [3, 5, 6, 8, 9, 1];
+        let value = 13;
+        let position = 3;
+
+        for (let i = array1.length - 1; i >= 0; i--) {
+            if (i >= position) {
+                array1[i + 1] = array1[i]
+                // console.log(array1);
+                if (i == position) {
+                    array1[i] = value
+                    console.log(array1);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
