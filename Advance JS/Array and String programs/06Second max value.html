@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function secondMax(arr) {
+            if (arr.length < 2) {
+                return "Array must have at least two elements";
+            }
+            let max = arr[0];
+            let secondmax = arr[1];
+            if (secondmax > max) {
+                [max, secondmax] = [secondmax, max];
+
+            }
+            for (let i = 2; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    secondmax = max;
+                    max = arr[i];
+                }
+                else if (arr[i] > secondmax && arr[i] !== max) {
+                    secondmax = arr[i];
+                }
+
+            }
+            if (secondmax === undefined) {
+                return "No second maximum value found.";
+            }
+
+            return secondmax;
+        }
+        const arr = [3, 7, 1, 9, 5, 10];
+        const result = secondMax(arr);
+        console.log("Second maximum value:", result);
+
+    </script>
+</body>
+
+</html>
