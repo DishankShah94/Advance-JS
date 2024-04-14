@@ -1,0 +1,61 @@
+<script>
+	let arr = [800, 700, 600, 500, 400, 300, 250, 150, 100, 50, 40, 30, 20, 10];
+	let lifeline = [{ '1': 'A', '2': 'B', '3': 'C', '4': 'D' }];
+	let selectedLifeline = '';
+	let timer = 10;
+	let intervalId;
+
+	function selectLifeline(id) {
+		// Clear the interval if it's already running
+		clearInterval(intervalId);
+
+		for (let i = 0; i < lifeline.length; i++) {
+			if (lifeline[i][id]) {
+				selectedLifeline = lifeline[i][id];
+				intervalId = setInterval(() => {
+					timer--;
+					if (timer === 0) {
+						clearInterval(intervalId); // Stop the timer
+						timer = 10; // Reset the timer
+						selectedLifeline = '';
+					}
+				}, 1000);
+			}
+		}
+	}
+</script>
+
+<div class="flex">
+	<div class="flex flex-col w-[75%]">
+		<div class="h-[65%] w-full bg-slate-800">
+			<div class="flex justify-center mt-56">
+				<div class="rounded-full border-4 border-indigo-600 p-5">
+					<div class="rounded-full border-4 border-indigo-900 p-11">{timer}</div>
+				</div>
+			</div>
+		</div>
+		<div class="h-[35%] w-full bg-red-600 flex items-center justify-center">{selectedLifeline}</div>
+	</div>
+	<div class="w-[25%] h-screen bg-purple-950">
+		<div class="flex justify-around">
+			{#each lifeline as lifelines}
+				{#each Object.entries(lifelines) as [id, value]}
+					<span
+						class="rounded-full cursor-pointer p-4 border-4 border-indigo-500/100 mt-3"
+						on:click={() => selectLifeline(id)}
+					>
+						{id}
+						{value}
+					</span>
+				{/each}
+			{/each}
+		</div>
+		<div class="flex flex-col">
+			{#each arr as arrValue}
+				<div class="rounded-full border-4 border-yellow-500 p-1 text-white mt-2">
+					{arrValue}
+				</div>
+			{/each}
+		</div>
+	</div>
+</div>
